@@ -1,3 +1,9 @@
 * {
   font-family: "Space Grotesk", sans-serif;
 }
+html {
+  overflow-x: hidden;
+}
+.dark {
+  background-color: black;
+}

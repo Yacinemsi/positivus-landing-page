@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Switch from "./Switch";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,30 +18,55 @@ const Header = () => {
     <header className="flex items-center justify-between py-6">
       {/* Logo */}
       <div>
-        <Link to="/">
-          <img src="/assets/Logo-header.svg" alt="logo" />
-        </Link>
-      </div>
+        <div className="dark:hidden w-36 sm:w-56">
+          <Link to="/">
+            <img src="/assets/Logo-header.svg" alt="logo" />
+          </Link>
+        </div>
 
+        <div className="hidden dark:block w-36 sm:w-56">
+          <Link to="/">
+            <img src="/assets/Logo-white-header.svg" alt="logo" />
+          </Link>
+        </div>
+      </div>
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex md:items-center md:justify-center md:space-x-8 text-sm">
-        <Link to="/">About us</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/use-cases">Use Cases</Link>
-        <Link to="/pricing">Pricing</Link>
-        <Link to="/blog">Blog</Link>
-        <button className="ml-4 rounded-xl border-black border-1 px-4 py-3">
-          Request a quote
-        </button>
+      <nav className="hidden md:flex md:items-center md:justify-center md:space-x-8 text-sm dark:text-white">
+        <Link to="/" className="hover:text-green-light">
+          About us
+        </Link>
+        <Link to="/services" className="hover:text-green-light">
+          Services
+        </Link>
+        <Link to="/use-cases" className="hover:text-green-light">
+          Use Cases
+        </Link>
+        <Link to="/pricing" className="hover:text-green-light">
+          Pricing
+        </Link>
+        <Link to="/blog" className="hover:text-green-light">
+          Blog
+        </Link>
+        <div className="border-b-transparent border-b-4 hover:border-b-black dark:hover:border-b-white rounded-[15px] transition-all duration-200">
+          <button className="relative rounded-xl border-black border-1 px-4 py-3 dark:border-white dark:hover:text-black hover:bg-green-light">
+            Request a quote
+          </button>
+        </div>
       </nav>
+      {/* Dark Mode Toggle */}
+      <div className="hidden md:flex">
+        <Switch />
+      </div>
 
       {/* Hamburger Icon for Mobile */}
       <div className="md:hidden">
-        <button onClick={toggleMenu} className="focus:outline-none text-3xl">
+        <button
+          onClick={toggleMenu}
+          className="focus:outline-none text-3xl dark:text-white"
+        >
           ☰
         </button>
       </div>
-
       {/* Background Overlay */}
       {isOpen && (
         <div
@@ -48,10 +74,9 @@ const Header = () => {
           onClick={closeMenu}
         ></div>
       )}
-
       {/* Sidebar Navigation for Mobile */}
       <div
-        className={`fixed top-0 right-0 h-full bg-white w-2/3 transform transition-transform duration-300 ${
+        className={`fixed top-0 -right-2 h-full bg-white w-2/3 transform transition-transform duration-300 md:hidden dark:bg-black shadow-md dark:shadow-slate-200 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -62,9 +87,11 @@ const Header = () => {
         >
           ✖️
         </button>
-
+        <div className="flex justify-center mt-8 md:hidden">
+          <Switch />
+        </div>
         {/* Navigation Links */}
-        <nav className="flex flex-col items-center mt-16 space-y-6 text-sm">
+        <nav className="flex flex-col items-center mt-8 space-y-6 text-sm dark:text-white">
           <Link to="/" onClick={closeMenu}>
             About us
           </Link>
@@ -82,7 +109,7 @@ const Header = () => {
           </Link>
           <button
             onClick={closeMenu}
-            className="mt-4 rounded-xl border-black border-1 px-4 py-3"
+            className="mt-4 rounded-xl border-black border-1 px-4 py-3 dark:border-white"
           >
             Request a quote
           </button>
