@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-4 border-1 border-solid border-black dark:border-white rounded-xl py-2 px-4  bg-white md:bg-white/70 dark:bg-black/70 flex items-center justify-between h-16 mb-10 md:mb-14 md:backdrop-blur-md">
+      <header className="sticky top-4 border-1 border-solid border-black dark:border-white rounded-xl py-2 px-4  bg-white md:bg-white/70 dark:bg-gray-dark/70 flex items-center justify-between h-16 mb-10 md:mb-14 md:backdrop-blur-md">
         {/* Logo */}
         <div className="max-w-28">
           <div className="dark:hidden w-full">
@@ -107,7 +107,7 @@ const Header = () => {
         )}
         {/* Sidebar Navigation for Mobile */}
         <div
-          className={`fixed top-0 -right-2 h-full bg-white w-2/3 transform transition-transform duration-300 md:hidden dark:bg-black shadow-md dark:shadow-slate-200 ${
+          className={`fixed top-0 -right-2 h-full bg-white w-2/3 transform transition-transform duration-300 md:hidden dark:bg-gray-dark shadow-md dark:shadow-slate-200 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

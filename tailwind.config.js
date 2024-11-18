@@ -5,6 +5,8 @@ module.exports = {
   theme: {
     screens: {
       md: "850px",
+      lg: "1024px",
+      xl: "1280px",
     },
     extend: {
       borderWidth: {
@@ -12,6 +14,7 @@ module.exports = {
       },
       colors: {
         "green-light": "#B9FF66",
+        "gray-dark": "#1A1A1A",
       },
     },
   },
