@@ -16,6 +16,9 @@ module.exports = {
         "green-light": "#B9FF66",
         "gray-dark": "#1A1A1A",
       },
+      rotate: {
+        30: "30deg",
+      },
     },
   },
   plugins: [],

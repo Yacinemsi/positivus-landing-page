@@ -4,73 +4,80 @@ import Card from "./Card";
 const ListCards = () => {
   const cardsData = [
     {
-      title: "Search engine optimization",
-      titleColor: "#B9FF66",
+      title1: "Search engine",
+      title2: "Optimization",
       imageSrc: "/assets/SEO-illustration.svg",
-      backgroundColor: "#F9FAFB",
-      textColor: "black",
-      buttonText: "Learn more",
-      buttonColor: "#000000",
+      classNameExtra: "bg-[#F3F3F3] text-black",
+      classNameExtraSpan: "bg-green-light w-fit rounded-lg px-1",
+      classNameButton: "",
+      classNameFaIcon: "text-green-light bg-black",
+      classNameHoverButtonText: "bg-green-light",
     },
     {
-      title: "Pay-per-click advertising",
-      titleColor: "#000000",
+      title1: "Pay-per-click",
+      title2: "Advertising",
       imageSrc: "/assets/PPCA-illustration.svg",
-      backgroundColor: "#B9FF66",
-      textColor: "black",
-      buttonText: "Learn more",
-      buttonColor: "#FFFFFF",
+      classNameExtra: "bg-green-light text-black",
+      classNameExtraSpan: "bg-[#F3F3F3] w-fit rounded-lg px-1",
+      classNameButton: "",
+      classNameFaIcon: "text-green-light bg-black",
+      classNameHoverButtonText: "bg-white",
     },
     {
-      title: "Social Media Marketing",
-      titleColor: "#FFFFFF",
+      title1: "Social Media",
+      title2: "Marketing",
       imageSrc: "/assets/SMM-illustration.svg",
-      backgroundColor: "#1A1A1A",
-      textColor: "white",
-      buttonText: "Learn more",
-      buttonColor: "#B9FF66",
+      classNameExtra: "bg-black text-black",
+      classNameExtraSpan: "bg-white w-fit rounded-lg px-1",
+      classNameButton: "text-white",
+      classNameFaIcon: "text-black bg-white",
+      classNameHoverButtonText: "bg-green-light",
     },
     {
-      title: "Email Marketing",
-      titleColor: "#B9FF66",
+      title1: "Email",
+      title2: "Marketing",
       imageSrc: "/assets/EM-illustration.svg",
-      backgroundColor: "#F9FAFB",
-      textColor: "black",
-      buttonText: "Learn more",
-      buttonColor: "#000000",
+      classNameExtra: "bg-[#F3F3F3] text-black",
+      classNameExtraSpan: "bg-green-light w-fit rounded-lg px-1",
+      classNameButton: "",
+      classNameFaIcon: "text-green-light bg-black",
+      classNameHoverButtonText: "bg-green-light",
     },
     {
-      title: "Content Creation",
-      titleColor: "#000000",
+      title1: "Content",
+      title2: "Creation",
       imageSrc: "/assets/CC-illustration.svg",
-      backgroundColor: "#B9FF66",
-      textColor: "black",
-      buttonText: "Learn more",
-      buttonColor: "#FFFFFF",
+      classNameExtra: "bg-green-light text-black",
+      classNameExtraSpan: "bg-white w-fit rounded-lg px-1",
+      classNameButton: "",
+      classNameFaIcon: "text-green-light bg-black",
+      classNameHoverButtonText: "bg-white",
     },
     {
-      title: "Analytics and Tracking",
-      titleColor: "#FFFFFF",
+      title1: "Analytics and",
+      title2: "Tracking",
       imageSrc: "/assets/AT-illustration.svg",
-      backgroundColor: "#1A1A1A",
-      textColor: "white",
-      buttonText: "Learn more",
-      buttonColor: "#B9FF66",
+      classNameExtra: "bg-black text-black",
+      classNameExtraSpan: "bg-white w-fit rounded-lg px-1",
+      classNameButton: "text-white",
+      classNameFaIcon: "text-black bg-white",
+      classNameHoverButtonText: "bg-green-light",
     },
   ];
 
   return (
     <>
-      <div className="flex">
-        <h2>Services</h2>
-        <p>
+      <div className="flex flex-col md:flex-row md:justify-start items-center justify-center md:gap-8 mb-8">
+        <h2 className="bg-green-light text-2xl font-medium px-2 rounded-md mb-6">
+          <span>Services</span>
+        </h2>
+        <p className="text-center text-xs mb-8 dark:text-white md:w-3/5 md:text-sm md:text-left">
           At our digital marketing agency, we offer a range of services to help
           businesses grow and succeed online. These services include:
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-20">
         {cardsData.map((card, index) => (
-          // @ts-ignore
           <Card key={index} {...card} />
         ))}
       </div>

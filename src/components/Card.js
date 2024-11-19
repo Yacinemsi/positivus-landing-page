@@ -4,52 +4,56 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Card = ({
-  title,
-  titleColor,
+  title1,
+  title2,
   imageSrc,
-  backgroundColor,
-  textColor,
-  buttonText,
-  onClick,
+  buttonText = "Learn more",
+  classNameExtra = "",
+  classNameExtraSpan = "",
+  classNameButton = "",
+  classNameFaIcon = "",
+  classNameHoverButtonText = "",
 }) => {
   return (
     <div
-      className="border-b-4 border-black rounded-[28px]"
-      style={{
-        backgroundColor: backgroundColor || "white",
-        color: textColor || "black",
-      }}
+      className={`border-b-4 border-black dark:border-white rounded-[28px] ${classNameExtra}`}
     >
-      <div
-        className={`grid grid-cols-2 grid-rows-2 gap-0 p-6 h-64 rounded-3xl border-solid border-1 border-black`}
-      >
-        {/* DIV 1: Title spans across two columns */}
-        <div
-          className="col-span-2 row-span-1 flex items-center md:col-span-1"
-          style={{ color: titleColor || "inherit" }}
-        >
-          <h3 className="text-xl font-bold">{title}</h3>
+      <div className="grid grid-cols-2 grid-rows-2 gap-0 py-6 px-8 h-52 rounded-3xl border-solid border-1 border-black">
+        {/* Title */}
+        <div className="col-span-2 md:col-span-1 row-span-1 flex items-center">
+          <h3 className="text-lg font-medium flex flex-col">
+            <span className={`${classNameExtraSpan}`}>{title1}</span>
+            <span className={`${classNameExtraSpan}`}>{title2}</span>
+          </h3>
         </div>
 
-        {/* DIV 2: Button with icon */}
-        <div className="flex items-center gap-2 col-span-1 row-start-2 md:col-span-1">
-          <span>
-            <FontAwesomeIcon icon={faArrowRight} />
-          </span>
+        {/* Button with Icon */}
+        <div className="flex items-end gap-2 col-span-1 row-start-2">
           <button
-            className={`font-medium text-sm`}
-            style={{
-              color: textColor || "black",
-            }}
+            className={`text-sm md:flex justify-center items-center gap-3 group relative ${classNameButton}`}
           >
-            {buttonText || "Learn more"}
+            {/* Icône FontAwesome sans remplissage */}
+            <FontAwesomeIcon
+              icon={faArrowRight}
+              className={`h-6 w-6 p-1 z-0 rounded-full -rotate-30 group-hover:scale-110 transition-transform duration-300 ease-in-out ${classNameFaIcon}`}
+            />
+
+            {/* Texte avec effet de remplissage */}
+            <span className="hidden md:block relative overflow-hidden">
+              <span className="relative z-10 group-hover:text-black">
+                {buttonText}
+              </span>
+              <span
+                className={`absolute inset-0 ${classNameHoverButtonText} transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0`}
+              ></span>
+            </span>
           </button>
         </div>
 
-        {/* DIV 3: Image */}
+        {/* Image */}
         {imageSrc && (
-          <div className="flex justify-end col-span-1 row-start-2 md:col-start-2 md:row-span-2">
-            <img src={imageSrc} alt={title} className="w-full" />
+          <div className="flex justify-end md:justify-end md:items-center items-end col-span-1 row-start-2 md:col-start-2 md:row-span-2">
+            <img src={imageSrc} alt={title1 + title2} className="w-40" />
           </div>
         )}
       </div>
