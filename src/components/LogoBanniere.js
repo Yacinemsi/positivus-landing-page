@@ -3,7 +3,7 @@ import React from "react";
 const LogoBanniere = () => {
   return (
     <>
-      <div className="flex flex-wrap justify-between gap-4 py-24">
+      <div className="flex flex-wrap justify-between gap-4 md:py-16 py-8">
         {[
           { src: "/assets/amazon-logo.svg", alt: "logo d'Amazon" },
           { src: "/assets/dribbble-logo.svg", alt: "logo de Dribbble" },

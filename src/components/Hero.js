@@ -27,7 +27,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6">
+    <div className="flex flex-col md:flex-row">
       <div className="flex-1 flex flex-col gap-3 md:gap-8">
         <h1 className="text-3xl/tight xl:text-6xl/tight lg:text-5xl/tight md:text-4xl/tight font-medium dark:text-white">
           Navigating the
