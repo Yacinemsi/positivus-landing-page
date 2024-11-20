@@ -28,7 +28,7 @@ const Card = ({
         </div>
 
         {/* Button with Icon */}
-        <div className="flex items-end gap-2 col-span-1 row-start-2">
+        <div className="z-0 flex items-end gap-2 col-span-1 row-start-2">
           <button
             className={`text-sm md:flex justify-center items-center gap-3 group relative ${classNameButton}`}
           >

@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-4 border-1 border-solid border-black dark:border-white rounded-xl py-2 px-4  bg-white md:bg-white/70 dark:bg-gray-dark dark:md:bg-gray-dark/70 flex items-center justify-between h-16 mb-10 md:mb-14 md:backdrop-blur-md">
+      <header className="sticky z-50 top-4 border-1 border-solid border-black dark:border-white rounded-xl py-2 px-4  bg-white md:bg-white/70 dark:bg-gray-dark dark:md:bg-gray-dark/70 flex items-center justify-between h-16 mb-10 md:mb-14 md:backdrop-blur-md">
         {/* Logo */}
         <div className="max-w-28">
           <div className="dark:hidden w-full">
@@ -36,7 +36,7 @@ const Header = () => {
         <nav className="hidden md:flex md:items-center md:justify-center md:gap-8 text-sm dark:text-white">
           <Link
             to="/about-us"
-            className="relative group overflow-hidden hover:text-green-light"
+            className="relative group overflow-hidden hover:text-green-light hover:cursor-pointer"
           >
             <span className="relative z-10 group-hover:text-black">
               About us
@@ -45,7 +45,7 @@ const Header = () => {
           </Link>
           <Link
             to="/services"
-            className="relative group overflow-hidden hover:text-green-light"
+            className="relative group overflow-hidden hover:text-green-light hover:cursor-pointer"
           >
             <span className="relative z-10 group-hover:text-black">
               Services
@@ -54,7 +54,7 @@ const Header = () => {
           </Link>
           <Link
             to="/use-cases"
-            className="relative group overflow-hidden hover:text-green-light"
+            className="relative group overflow-hidden hover:text-green-light hover:cursor-pointer"
           >
             <span className="relative z-10 group-hover:text-black">
               Use Cases
@@ -63,7 +63,7 @@ const Header = () => {
           </Link>
           <Link
             to="/pricing"
-            className="relative group overflow-hidden hover:text-green-light"
+            className="relative group overflow-hidden hover:text-green-light hover:cursor-pointer"
           >
             <span className="relative z-10 group-hover:text-black">
               Pricing
@@ -72,7 +72,7 @@ const Header = () => {
           </Link>
           <Link
             to="/blog"
-            className="relative group overflow-hidden hover:text-green-light"
+            className="relative group overflow-hidden hover:text-green-light hover:cursor-pointer"
           >
             <span className="relative z-10 group-hover:text-black">Blog</span>
             <span className="absolute inset-0 bg-green-light transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-in-out z-0"></span>
