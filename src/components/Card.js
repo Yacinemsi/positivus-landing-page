@@ -16,7 +16,7 @@ const Card = ({
 }) => {
   return (
     <div
-      className={`border-b-4 border-black dark:border-white rounded-[28px] ${classNameExtra}`}
+      className={`border-b-4 border-black dark:border-white rounded-4xl ${classNameExtra}`}
     >
       <div className="grid grid-cols-2 grid-rows-2 gap-0 py-6 px-8 h-52 rounded-3xl border-solid border-1 border-black">
         {/* Title */}

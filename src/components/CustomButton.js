@@ -9,7 +9,7 @@ const CustomButton = ({
 }) => {
   return (
     <div
-      className={`hover:border-b-black dark:hover:border-b-white border-b-transparent border-b-4 rounded-[15px] transition-all duration-200 ${classNameDiv}`}
+      className={`hover:border-b-black border-b-transparent border-b-4 rounded-[15px] transition-all duration-200 ${classNameDiv}`}
     >
       <button
         className={`dark:border-white dark:hover:text-black rounded-xl border-black border-1 px-4 py-3 dark:hover:bg-green-light hover:bg-green-light ${classNameButton}`}

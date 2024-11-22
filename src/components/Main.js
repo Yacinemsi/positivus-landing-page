@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./Hero";
 import LogoBanniere from "./LogoBanniere";
 import ListCards from "./ListCards";
+import CaseStudies from "./CaseStudies";
 
 const Main = () => {
   return (
@@ -9,6 +10,7 @@ const Main = () => {
       <Hero />
       <LogoBanniere />
       <ListCards />
+      <CaseStudies />
     </main>
   );
 };

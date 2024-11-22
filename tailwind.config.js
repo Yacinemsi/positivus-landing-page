@@ -19,6 +19,12 @@ module.exports = {
       rotate: {
         30: "30deg",
       },
+      borderRadius: {
+        "4xl": "28px",
+      },
+      backgroundColor: {
+        dark: "#191A23",
+      },
     },
   },
   plugins: [],

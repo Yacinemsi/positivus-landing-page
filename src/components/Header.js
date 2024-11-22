@@ -79,7 +79,7 @@ const Header = () => {
           </Link>
           <CustomButton
             text="Request a quote"
-            classNameDiv="mt-1"
+            classNameDiv="mt-1 dark:hover:border-b-white"
             classNameButton="mt-1"
           />
         </nav>
