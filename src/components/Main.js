@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import LogoBanniere from "./LogoBanniere";
 import ListCards from "./ListCards";
 import CaseStudies from "./CaseStudies";
+import OurWorkingProcess from "./OurWorkingProcess";
 
 const Main = () => {
   return (
@@ -11,6 +12,7 @@ const Main = () => {
       <LogoBanniere />
       <ListCards />
       <CaseStudies />
+      <OurWorkingProcess />
     </main>
   );
 };
