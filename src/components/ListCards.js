@@ -68,7 +68,7 @@ const ListCards = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row md:justify-start items-center justify-center md:gap-8 mb-8">
+      <div className="flex flex-col md:flex-row md:justify-start items-center justify-center md:gap-8 my-8">
         <h2 className="bg-green-light text-2xl font-medium px-2 rounded-md mb-8">
           <span>Services</span>
         </h2>
@@ -92,8 +92,7 @@ const ListCards = () => {
             services can help your business grow and succeed online.
           </p>
           <CustomButton
-            classNameDiv="max-w-60 w-full dark:hover:border-b-black"
-            classNameButton="w-full bg-dark text-white max-w-60 hover:text-black"
+            classNameButton="w-full bg-dark text-white max-w-60 hover:text-black dark:hover:shadow-box dark:border-black"
             text="Get your proposal"
           />
         </div>

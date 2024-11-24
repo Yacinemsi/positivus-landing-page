@@ -49,8 +49,7 @@ const Hero = () => {
         </p>
         <CustomButton
           text="Book a consultation"
-          classNameDiv="dark:hover:border-b-white w-full max-w-80 md:w-52 place-self-center md:place-self-start"
-          classNameButton="w-full hover:text-black  mt-4 bg-black text-white dark:bg-white dark:text-black"
+          classNameButton="w-full hover:text-black mt-4 max-w-80 md:w-52 bg-black text-white dark:bg-white dark:hover:bg-green-light dark:text-black"
         />
       </div>
       <div className="flex flex-col justify-center items-center w-1/2">

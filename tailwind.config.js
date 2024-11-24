@@ -26,6 +26,11 @@ module.exports = {
         dark: "#191A23",
       },
       before: ["open"],
+      boxShadow: {
+        box: "0px 4px 0px 0px #000000",
+        boxWhite: "0px 4px 0px 0px #FFFFFF",
+        boxGreen: "0px 4px 0px 0px #B9FF66",
+      },
     },
   },
   plugins: [],

@@ -4,9 +4,9 @@ import CaseStudieCard from "./CaseStudieCard";
 const CaseStudies = () => {
   return (
     <>
-      <div className="mb-12">
+      <div className="mb-6">
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:justify-start items-center justify-center md:gap-8 mb-2">
+        <div className="flex flex-col md:flex-row md:justify-start items-center justify-center md:gap-8 my-8">
           <h2 className="bg-green-light text-2xl font-medium px-2 rounded-md mb-8">
             <span>Case Studies</span>
           </h2>

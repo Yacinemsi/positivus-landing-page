@@ -43,23 +43,25 @@ const OurWorkingProcess = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row md:justify-start items-center justify-center md:gap-8 mt-24 mb-8">
-        <h2 className="bg-green-light text-2xl font-medium px-2 rounded-md mb-8">
-          <span>Our Working Process </span>
-        </h2>
-        <p className="text-center text-xs mb-8 dark:text-white md:w-64 md:text-sm md:text-left">
-          Step-by-Step Guide to Achieving Your Business Goals
-        </p>
-      </div>
-      <div className="space-y-4">
-        {accordionData.map((item, index) => (
-          <ToggleAccordion
-            key={index}
-            number={item.number}
-            title={item.title}
-            content={item.content}
-          />
-        ))}
+      <div className="py-10">
+        <div className="flex flex-col md:flex-row md:justify-start items-center justify-center md:gap-8 my-8">
+          <h2 className="bg-green-light text-2xl font-medium px-2 rounded-md mb-8">
+            <span>Our Working Process </span>
+          </h2>
+          <p className="text-center text-xs mb-8 dark:text-white md:w-64 md:text-sm md:text-left">
+            Step-by-Step Guide to Achieving Your Business Goals
+          </p>
+        </div>
+        <div className="space-y-3">
+          {accordionData.map((item, index) => (
+            <ToggleAccordion
+              key={index}
+              number={item.number}
+              title={item.title}
+              content={item.content}
+            />
+          ))}
+        </div>
       </div>
     </>
   );

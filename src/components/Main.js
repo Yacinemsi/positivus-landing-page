@@ -4,6 +4,7 @@ import LogoBanniere from "./LogoBanniere";
 import ListCards from "./ListCards";
 import CaseStudies from "./CaseStudies";
 import OurWorkingProcess from "./OurWorkingProcess";
+import Team from "./Team";
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
       <ListCards />
       <CaseStudies />
       <OurWorkingProcess />
+      <Team />
     </main>
   );
 };
